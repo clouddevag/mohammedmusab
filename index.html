@@ -1,0 +1,1066 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>استشارة ما قبل تنفيذ المشروع | Mohammed Al-Olayan</title>
+
+<style>
+:root{
+--n:#081a33;
+--b:#1687ff;
+--bg:#f5f8fc;
+--t:#10233f;
+--m:#65748a;
+--l:#dfe7f0
+}
+
+*{
+box-sizing:border-box
+}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:var(--bg);
+color:var(--t);
+line-height:1.7
+}
+
+a{
+text-decoration:none
+}
+
+.wrap{
+max-width:1180px;
+margin:auto;
+padding:0 22px
+}
+
+nav{
+height:76px;
+background:#fff;
+border-bottom:1px solid var(--l);
+display:flex;
+align-items:center;
+position:sticky;
+top:0;
+z-index:5
+}
+
+.navin{
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center
+}
+
+.brand{
+font-weight:800
+}
+
+.brand span{
+color:var(--b)
+}
+
+button{
+cursor:pointer
+}
+
+.btn{
+border:0;
+border-radius:13px;
+padding:12px 20px;
+font-weight:800
+}
+
+.dark{
+background:var(--n);
+color:#fff
+}
+
+.hero{
+padding:80px 0 65px;
+background:linear-gradient(135deg,#fff,#edf5ff)
+}
+
+.grid{
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:45px;
+align-items:center
+}
+
+.badge{
+display:inline-block;
+padding:7px 13px;
+border-radius:30px;
+background:#e8f5ff;
+color:#0875dc;
+font-weight:700;
+font-size:14px
+}
+
+h1{
+font-size:48px;
+line-height:1.2;
+margin:18px 0
+}
+
+.blue{
+color:var(--b)
+}
+
+.lead{
+font-size:19px;
+color:var(--m);
+max-width:700px
+}
+
+.cta{
+display:flex;
+gap:12px;
+margin-top:25px;
+flex-wrap:wrap
+}
+
+.primary{
+background:linear-gradient(135deg,#0c65d8,#13a7ff);
+color:#fff
+}
+
+.secondary{
+background:#fff;
+border:1px solid var(--l);
+border-radius:13px;
+padding:12px 20px;
+font-weight:700
+}
+
+.heroCard{
+background:var(--n);
+color:#fff;
+border-radius:28px;
+padding:28px;
+box-shadow:0 22px 55px #0a1d3820
+}
+
+.price{
+font-size:38px;
+font-weight:900
+}
+
+.price small{
+font-size:15px;
+color:#b7c7da
+}
+
+.tick{
+margin:10px 0;
+color:#eaf4ff
+}
+
+.tick b{
+color:#42c8ff
+}
+
+section{
+padding:70px 0
+}
+
+.head{
+text-align:center;
+max-width:720px;
+margin:0 auto 38px
+}
+
+.head h2{
+font-size:34px;
+margin:0
+}
+
+.head p{
+color:var(--m)
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.card,
+.step,
+.form,
+details{
+background:#fff;
+border:1px solid var(--l);
+border-radius:20px;
+padding:23px
+}
+
+.icon{
+font-size:24px
+}
+
+.card h3{
+margin:8px 0
+}
+
+.card p,
+.step p,
+details p{
+color:var(--m);
+margin:0
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:12px
+}
+
+.step{
+text-align:center
+}
+
+.num{
+color:var(--b);
+font-weight:800
+}
+
+.booking{
+background:var(--n);
+color:#fff
+}
+
+.bookingGrid{
+display:grid;
+grid-template-columns:.85fr 1.15fr;
+gap:35px
+}
+
+.copy p{
+color:#bdcce0
+}
+
+.form{
+color:var(--t)
+}
+
+.formGrid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px
+}
+
+.field{
+display:flex;
+flex-direction:column;
+gap:6px
+}
+
+.full{
+grid-column:1/-1
+}
+
+input,
+select,
+textarea{
+font:inherit;
+border:1px solid var(--l);
+border-radius:11px;
+padding:11px;
+outline:0
+}
+
+textarea{
+min-height:100px
+}
+
+.times{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:8px
+}
+
+.time{
+border:1px solid var(--l);
+background:#fff;
+border-radius:10px;
+padding:9px
+}
+
+.time.active{
+background:#eaf6ff;
+border-color:var(--b);
+color:#0568cb;
+font-weight:800
+}
+
+.submit{
+width:100%;
+margin-top:16px;
+padding:14px;
+border:0;
+border-radius:12px;
+background:linear-gradient(135deg,#0c65d8,#13a7ff);
+color:#fff;
+font-weight:800;
+font-size:16px
+}
+
+.result{
+display:none;
+margin-top:14px;
+padding:14px;
+border-radius:12px;
+background:#e9fff5;
+color:#0d704b
+}
+
+.note{
+font-size:12px;
+color:#77869a;
+margin-top:8px
+}
+
+.faq{
+max-width:850px;
+margin:auto
+}
+
+details{
+margin:10px 0
+}
+
+summary{
+font-weight:800;
+cursor:pointer
+}
+
+footer{
+padding:30px 0;
+background:#061427;
+color:#b9c7d9
+}
+
+.foot{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap
+}
+
+.wa{
+position:fixed;
+left:20px;
+bottom:20px;
+background:#18b86a;
+color:#fff;
+padding:13px 18px;
+border-radius:50px;
+font-weight:800;
+z-index:9
+}
+
+@media(max-width:850px){
+
+.grid,
+.bookingGrid{
+grid-template-columns:1fr
+}
+
+.cards{
+grid-template-columns:1fr
+}
+
+.steps{
+grid-template-columns:1fr 1fr
+}
+
+h1{
+font-size:37px
+}
+
+.formGrid{
+grid-template-columns:1fr
+}
+
+.full{
+grid-column:auto
+}
+
+.times{
+grid-template-columns:1fr 1fr
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="wrap navin">
+
+<div class="brand">
+Mohammed <span>Al-Olayan</span>
+</div>
+
+<button class="btn dark" onclick="go('booking')">
+احجز استشارتك
+</button>
+
+</div>
+</nav>
+
+
+<header class="hero">
+
+<div class="wrap grid">
+
+<div>
+
+<span class="badge">
+استشارة ما قبل تنفيذ المشروع
+</span>
+
+<h1>
+عندك فكرة موقع أو تطبيق؟
+<br>
+<span class="blue">
+لا تبدأ قبل أن تعرف ماذا تحتاج.
+</span>
+</h1>
+
+<p class="lead">
+جلسة استشارية عملية نراجع فيها فكرتك،
+نحدد نوع المنصة المناسب، نرتب الخصائص،
+ونبني لك خارطة طريق واضحة قبل التصميم والبرمجة.
+</p>
+
+<div class="cta">
+
+<button class="btn primary" onclick="go('booking')">
+احجز جلسة الآن
+</button>
+
+<a class="secondary" href="#how">
+كيف تعمل الاستشارة؟
+</a>
+
+</div>
+
+</div>
+
+
+<div class="heroCard">
+
+<div>
+جلسة واحدة • 60 دقيقة
+</div>
+
+<div class="price">
+50,000
+<small>د.ع</small>
+</div>
+
+<div class="tick">
+<b>✓</b> تحليل فكرة المشروع
+</div>
+
+<div class="tick">
+<b>✓</b> تحديد نوع المنصة والمزايا
+</div>
+
+<div class="tick">
+<b>✓</b> تصور أولي للتكلفة والمدة
+</div>
+
+<div class="tick">
+<b>✓</b> خارطة طريق للتنفيذ
+</div>
+
+<div class="tick">
+<b>✓</b> يخصم المبلغ من تكلفة التنفيذ عند التعاقد
+</div>
+
+</div>
+
+</div>
+</header>
+
+
+<section id="how">
+
+<div class="wrap">
+
+<div class="head">
+
+<h2>
+ماذا ننجز خلال الجلسة؟
+</h2>
+
+<p>
+نحوّل الفكرة من تصور عام إلى متطلبات يمكن البناء عليها.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icon">💡</div>
+
+<h3>
+فهم الفكرة
+</h3>
+
+<p>
+المشكلة، الجمهور المستهدف، وطريقة استخدام المشروع.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🧩</div>
+
+<h3>
+اختيار المنصة
+</h3>
+
+<p>
+موقع، Web App، تطبيق، متجر، منصة حجز أو نظام خاص.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">⚙️</div>
+
+<h3>
+تحديد الخصائص
+</h3>
+
+<p>
+الحسابات، الدفع، الخرائط، الحجوزات، الإشعارات ولوحة التحكم.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📊</div>
+
+<h3>
+تقدير المشروع
+</h3>
+
+<p>
+تصور أولي لحجم العمل والمراحل والمدة والميزانية.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🗺️</div>
+
+<h3>
+خارطة الطريق
+</h3>
+
+<p>
+ترتيب واضح من الفكرة إلى التصميم والتطوير والاختبار والإطلاق.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🎯</div>
+
+<h3>
+قرار أوضح
+</h3>
+
+<p>
+تعرف ما الذي تحتاجه الآن وما الذي يمكن تأجيله.
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section style="background:#eef5fb">
+
+<div class="wrap">
+
+<div class="head">
+
+<h2>
+رحلة مشروعك
+</h2>
+
+<p>
+خطوات بسيطة قبل أن تبدأ البرمجة.
+</p>
+
+</div>
+
+
+<div class="steps">
+
+<div class="step">
+<div class="num">01</div>
+<h3>تحجز</h3>
+<p>تختار الموعد.</p>
+</div>
+
+<div class="step">
+<div class="num">02</div>
+<h3>ترسل فكرتك</h3>
+<p>تعبئ التفاصيل.</p>
+</div>
+
+<div class="step">
+<div class="num">03</div>
+<h3>نناقشها</h3>
+<p>جلسة 60 دقيقة.</p>
+</div>
+
+<div class="step">
+<div class="num">04</div>
+<h3>نخطط</h3>
+<p>نحدد الأولويات.</p>
+</div>
+
+<div class="step">
+<div class="num">05</div>
+<h3>تنفذ</h3>
+<p>تبدأ بخطة واضحة.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section class="booking" id="booking">
+
+<div class="wrap bookingGrid">
+
+
+<div class="copy">
+
+<span class="badge">
+احجز الآن
+</span>
+
+<h2 style="font-size:38px;margin:15px 0">
+خلّينا نناقش فكرتك.
+</h2>
+
+<p>
+املأ النموذج وسأستخدم المعلومات لفهم المشروع قبل الجلسة
+حتى يكون وقت الاستشارة مركزًا على القرارات المهمة.
+</p>
+
+<ul>
+<li>60 دقيقة</li>
+<li>استشارة أونلاين</li>
+<li>50,000 د.ع</li>
+<li>تُخصم من تكلفة التنفيذ عند التعاقد</li>
+</ul>
+
+</div>
+
+
+<form class="form" id="form">
+
+<div class="formGrid">
+
+
+<div class="field">
+
+<label>
+الاسم الكامل *
+</label>
+
+<input id="name" required>
+
+</div>
+
+
+<div class="field">
+
+<label>
+رقم WhatsApp *
+</label>
+
+<input
+id="phone"
+required
+placeholder="07xxxxxxxxx"
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+نوع المشروع *
+</label>
+
+<select id="type" required>
+
+<option value="">
+اختر
+</option>
+
+<option>
+موقع إلكتروني
+</option>
+
+<option>
+Web App / منصة
+</option>
+
+<option>
+تطبيق موبايل
+</option>
+
+<option>
+متجر إلكتروني
+</option>
+
+<option>
+نظام داخلي
+</option>
+
+<option>
+غير متأكد
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>
+الميزانية
+</label>
+
+<select id="budget">
+
+<option>
+غير محددة
+</option>
+
+<option>
+أقل من 1 مليون د.ع
+</option>
+
+<option>
+1–3 مليون د.ع
+</option>
+
+<option>
+3–5 مليون د.ع
+</option>
+
+<option>
+أكثر من 5 مليون د.ع
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field full">
+
+<label>
+التاريخ *
+</label>
+
+<input
+id="date"
+type="date"
+required
+>
+
+</div>
+
+
+<div class="field full">
+
+<label>
+الوقت *
+</label>
+
+<div class="times" id="times"></div>
+
+<input
+id="time"
+type="hidden"
+required
+>
+
+</div>
+
+
+<div class="field full">
+
+<label>
+اشرح فكرتك *
+</label>
+
+<textarea
+id="idea"
+required
+placeholder="ما الذي تريد بناءه؟ ومن سيستخدمه؟ وما أهم شيء تريد أن يفعله؟"
+></textarea>
+
+</div>
+
+</div>
+
+
+<button class="submit">
+تأكيد طلب حجز الاستشارة
+</button>
+
+
+<div class="note">
+هذه نسخة MVP: تفتح WhatsApp لتأكيد الطلب.
+يمكن ربطها لاحقًا ببوابة دفع وتقويم وقاعدة بيانات.
+</div>
+
+
+<div class="result" id="result"></div>
+
+</form>
+
+</div>
+</section>
+
+
+<section>
+
+<div class="wrap faq">
+
+<div class="head">
+
+<h2>
+أسئلة شائعة
+</h2>
+
+</div>
+
+
+<details>
+
+<summary>
+هل يجب أن تكون لدي فكرة مكتملة؟
+</summary>
+
+<p>
+لا، يمكنك الحجز حتى لو كانت الفكرة في بدايتها.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+هل الاستشارة تعني أن المشروع سيتم تنفيذه؟
+</summary>
+
+<p>
+لا، هي مرحلة مستقلة تساعدك على اتخاذ قرار واضح.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+هل تخصم رسوم الاستشارة؟
+</summary>
+
+<p>
+نعم، حسب نموذج الخدمة تُخصم من تكلفة التنفيذ عند التعاقد.
+</p>
+
+</details>
+
+</div>
+</section>
+
+
+<footer>
+
+<div class="wrap foot">
+
+<div>
+© 2026 Mohammed Al-Olayan
+</div>
+
+<div>
+استشارات المواقع والمنصات والتطبيقات
+</div>
+
+</div>
+
+</footer>
+
+
+<a class="wa" id="wa" target="_blank">
+WhatsApp
+</a>
+
+
+<script>
+
+function go(id){
+
+document
+.getElementById(id)
+.scrollIntoView({
+behavior:'smooth'
+});
+
+}
+
+
+const slots=[
+
+'10:00 صباحًا',
+'12:00 ظهرًا',
+'2:00 مساءً',
+'4:00 مساءً',
+'6:00 مساءً',
+'8:00 مساءً'
+
+];
+
+
+slots.forEach(t=>{
+
+let b=document.createElement('button');
+
+b.type='button';
+
+b.className='time';
+
+b.textContent=t;
+
+b.onclick=()=>{
+
+document
+.querySelectorAll('.time')
+.forEach(x=>x.classList.remove('active'));
+
+b.classList.add('active');
+
+document
+.getElementById('time')
+.value=t;
+
+};
+
+document
+.getElementById('times')
+.appendChild(b);
+
+});
+
+
+let d=document.getElementById('date');
+
+let now=new Date();
+
+d.min=new Date(
+now-now.getTimezoneOffset()*60000
+)
+.toISOString()
+.slice(0,10);
+
+
+const WA='9647857275552';
+
+
+document.getElementById('wa').href=
+'https://wa.me/'+WA;
+
+
+document.getElementById('form').onsubmit=e=>{
+
+e.preventDefault();
+
+
+if(!document.getElementById('time').value)
+
+return alert(
+'يرجى اختيار وقت الاستشارة'
+);
+
+
+let v=id=>
+document.getElementById(id).value;
+
+
+let msg=
+
+`طلب حجز استشارة
+الاسم: ${encodeURIComponent(v('name'))}
+WhatsApp: ${encodeURIComponent(v('phone'))}
+نوع المشروع: ${encodeURIComponent(v('type'))}
+الميزانية: ${encodeURIComponent(v('budget'))}
+التاريخ: ${encodeURIComponent(v('date'))}
+الوقت: ${encodeURIComponent(v('time'))}
+الفكرة: ${encodeURIComponent(v('idea'))}`;
+
+
+document
+.getElementById('result')
+.style.display='block';
+
+
+document
+.getElementById('result')
+.textContent=
+'تم تجهيز الطلب، سيتم فتح WhatsApp لتأكيد الحجز.';
+
+
+window.open(
+'https://wa.me/'+WA+
+'?text='+encodeURIComponent(msg),
+'_blank'
+);
+
+};
+
+</script>
+
+</body>
+</html>
