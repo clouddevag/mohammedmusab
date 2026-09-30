@@ -1,23 +1,34 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>استشارة ما قبل تنفيذ المشروع | Mohammed Al-Olayan</title>
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>
+استشارة ما قبل تنفيذ المشروع | Mohammed Al-Olayan
+</title>
 
 <style>
+
 :root{
 --n:#081a33;
 --b:#1687ff;
 --bg:#f5f8fc;
 --t:#10233f;
 --m:#65748a;
---l:#dfe7f0
+--l:#dfe7f0;
 }
 
 *{
-box-sizing:border-box
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
@@ -25,18 +36,26 @@ margin:0;
 font-family:Arial,sans-serif;
 background:var(--bg);
 color:var(--t);
-line-height:1.7
+line-height:1.7;
 }
 
 a{
-text-decoration:none
+text-decoration:none;
+}
+
+button{
+cursor:pointer;
+font-family:inherit;
 }
 
 .wrap{
 max-width:1180px;
 margin:auto;
-padding:0 22px
+padding:0 22px;
 }
+
+
+/* NAVBAR */
 
 nav{
 height:76px;
@@ -46,50 +65,55 @@ display:flex;
 align-items:center;
 position:sticky;
 top:0;
-z-index:5
+z-index:20;
 }
 
 .navin{
 width:100%;
 display:flex;
 justify-content:space-between;
-align-items:center
+align-items:center;
 }
 
 .brand{
-font-weight:800
+font-weight:800;
+font-size:20px;
 }
 
 .brand span{
-color:var(--b)
-}
-
-button{
-cursor:pointer
+color:var(--b);
 }
 
 .btn{
 border:0;
 border-radius:13px;
 padding:12px 20px;
-font-weight:800
+font-weight:800;
+font-size:15px;
 }
 
 .dark{
 background:var(--n);
-color:#fff
+color:#fff;
 }
+
+
+/* HERO */
 
 .hero{
 padding:80px 0 65px;
-background:linear-gradient(135deg,#fff,#edf5ff)
+background:linear-gradient(
+135deg,
+#fff,
+#edf5ff
+);
 }
 
 .grid{
 display:grid;
 grid-template-columns:1.15fr .85fr;
 gap:45px;
-align-items:center
+align-items:center;
 }
 
 .badge{
@@ -99,35 +123,39 @@ border-radius:30px;
 background:#e8f5ff;
 color:#0875dc;
 font-weight:700;
-font-size:14px
+font-size:14px;
 }
 
 h1{
 font-size:48px;
 line-height:1.2;
-margin:18px 0
+margin:18px 0;
 }
 
 .blue{
-color:var(--b)
+color:var(--b);
 }
 
 .lead{
 font-size:19px;
 color:var(--m);
-max-width:700px
+max-width:700px;
 }
 
 .cta{
 display:flex;
 gap:12px;
 margin-top:25px;
-flex-wrap:wrap
+flex-wrap:wrap;
 }
 
 .primary{
-background:linear-gradient(135deg,#0c65d8,#13a7ff);
-color:#fff
+background:linear-gradient(
+135deg,
+#0c65d8,
+#13a7ff
+);
+color:#fff;
 }
 
 .secondary{
@@ -135,59 +163,70 @@ background:#fff;
 border:1px solid var(--l);
 border-radius:13px;
 padding:12px 20px;
-font-weight:700
+font-weight:700;
+color:var(--t);
 }
+
+
+/* PRICE CARD */
 
 .heroCard{
 background:var(--n);
 color:#fff;
 border-radius:28px;
 padding:28px;
-box-shadow:0 22px 55px #0a1d3820
+box-shadow:0 22px 55px #0a1d3820;
 }
 
 .price{
 font-size:38px;
-font-weight:900
+font-weight:900;
+margin:8px 0 18px;
 }
 
 .price small{
 font-size:15px;
-color:#b7c7da
+color:#b7c7da;
 }
 
 .tick{
 margin:10px 0;
-color:#eaf4ff
+color:#eaf4ff;
 }
 
 .tick b{
-color:#42c8ff
+color:#42c8ff;
 }
 
+
+/* SECTIONS */
+
 section{
-padding:70px 0
+padding:70px 0;
 }
 
 .head{
 text-align:center;
 max-width:720px;
-margin:0 auto 38px
+margin:0 auto 38px;
 }
 
 .head h2{
 font-size:34px;
-margin:0
+margin:0;
 }
 
 .head p{
-color:var(--m)
+color:var(--m);
 }
+
+
+/* CARDS */
 
 .cards{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:18px
+gap:18px;
 }
 
 .card,
@@ -197,72 +236,79 @@ details{
 background:#fff;
 border:1px solid var(--l);
 border-radius:20px;
-padding:23px
+padding:23px;
 }
 
 .icon{
-font-size:24px
+font-size:24px;
 }
 
 .card h3{
-margin:8px 0
+margin:8px 0;
 }
 
 .card p,
 .step p,
 details p{
 color:var(--m);
-margin:0
+margin:0;
 }
+
+
+/* STEPS */
 
 .steps{
 display:grid;
 grid-template-columns:repeat(5,1fr);
-gap:12px
+gap:12px;
 }
 
 .step{
-text-align:center
+text-align:center;
 }
 
 .num{
 color:var(--b);
-font-weight:800
+font-weight:800;
+font-size:20px;
 }
+
+
+/* BOOKING */
 
 .booking{
 background:var(--n);
-color:#fff
+color:#fff;
 }
 
 .bookingGrid{
 display:grid;
 grid-template-columns:.85fr 1.15fr;
-gap:35px
+gap:35px;
 }
 
 .copy p{
-color:#bdcce0
+color:#bdcce0;
 }
 
 .form{
-color:var(--t)
+color:var(--t);
 }
 
 .formGrid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:14px
+gap:14px;
 }
 
 .field{
 display:flex;
 flex-direction:column;
-gap:6px
+gap:6px;
 }
 
 .full{
-grid-column:1/-1
+grid-column:1/-1;
 }
 
 input,
@@ -272,32 +318,119 @@ font:inherit;
 border:1px solid var(--l);
 border-radius:11px;
 padding:11px;
-outline:0
+outline:0;
+width:100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+border-color:var(--b);
 }
 
 textarea{
-min-height:100px
+min-height:100px;
+resize:vertical;
 }
+
+
+/* TIME */
 
 .times{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:8px
+gap:8px;
 }
 
 .time{
 border:1px solid var(--l);
 background:#fff;
 border-radius:10px;
-padding:9px
+padding:9px;
 }
 
 .time.active{
 background:#eaf6ff;
 border-color:var(--b);
 color:#0568cb;
-font-weight:800
+font-weight:800;
 }
+
+
+/* PAYMENT */
+
+.payment-box{
+margin-top:25px;
+background:#f7faff;
+border:1px solid var(--l);
+border-radius:20px;
+padding:22px;
+text-align:center;
+}
+
+.payment-box h3{
+margin:0 0 8px;
+color:#081a33;
+font-size:23px;
+}
+
+.payment-box p{
+color:#65748a;
+margin:5px 0 15px;
+}
+
+.qr-image{
+width:230px;
+max-width:100%;
+display:block;
+margin:15px auto;
+border-radius:16px;
+}
+
+.transfer-label{
+display:block;
+font-size:13px;
+color:#65748a;
+margin-bottom:5px;
+}
+
+.transfer-number{
+background:#081a33;
+color:#fff;
+border-radius:12px;
+padding:12px;
+margin:15px 0;
+font-size:21px;
+font-weight:800;
+letter-spacing:1px;
+direction:ltr;
+}
+
+.pay-button{
+display:block;
+width:100%;
+background:linear-gradient(
+135deg,
+#0c65d8,
+#13a7ff
+);
+color:#fff;
+border:0;
+border-radius:12px;
+padding:14px;
+font-size:17px;
+font-weight:800;
+cursor:pointer;
+}
+
+.payment-note{
+font-size:12px;
+color:#77869a;
+margin-top:10px;
+}
+
+
+/* SUBMIT */
 
 .submit{
 width:100%;
@@ -305,10 +438,14 @@ margin-top:16px;
 padding:14px;
 border:0;
 border-radius:12px;
-background:linear-gradient(135deg,#0c65d8,#13a7ff);
+background:linear-gradient(
+135deg,
+#0c65d8,
+#13a7ff
+);
 color:#fff;
 font-weight:800;
-font-size:16px
+font-size:16px;
 }
 
 .result{
@@ -317,40 +454,50 @@ margin-top:14px;
 padding:14px;
 border-radius:12px;
 background:#e9fff5;
-color:#0d704b
+color:#0d704b;
 }
 
 .note{
 font-size:12px;
 color:#77869a;
-margin-top:8px
+margin-top:8px;
 }
+
+
+/* FAQ */
 
 .faq{
 max-width:850px;
-margin:auto
+margin:auto;
 }
 
 details{
-margin:10px 0
+margin:10px 0;
 }
 
 summary{
 font-weight:800;
-cursor:pointer
+cursor:pointer;
 }
+
+
+/* FOOTER */
 
 footer{
 padding:30px 0;
 background:#061427;
-color:#b9c7d9
+color:#b9c7d9;
 }
 
 .foot{
 display:flex;
 justify-content:space-between;
-flex-wrap:wrap
+flex-wrap:wrap;
+gap:10px;
 }
+
+
+/* WHATSAPP */
 
 .wa{
 position:fixed;
@@ -361,60 +508,132 @@ color:#fff;
 padding:13px 18px;
 border-radius:50px;
 font-weight:800;
-z-index:9
+z-index:30;
+box-shadow:0 8px 25px #0002;
 }
+
+
+/* MOBILE */
 
 @media(max-width:850px){
 
 .grid,
 .bookingGrid{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .cards{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .steps{
-grid-template-columns:1fr 1fr
+grid-template-columns:1fr 1fr;
 }
 
 h1{
-font-size:37px
+font-size:37px;
 }
 
 .formGrid{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .full{
-grid-column:auto
+grid-column:auto;
 }
 
 .times{
-grid-template-columns:1fr 1fr
+grid-template-columns:1fr 1fr;
+}
+
+.hero{
+padding-top:55px;
+}
+
+.heroCard{
+margin-top:10px;
 }
 
 }
+
+@media(max-width:500px){
+
+nav{
+height:70px;
+}
+
+.brand{
+font-size:16px;
+}
+
+.navin .btn{
+padding:10px 13px;
+font-size:13px;
+}
+
+h1{
+font-size:32px;
+}
+
+.lead{
+font-size:17px;
+}
+
+.steps{
+grid-template-columns:1fr;
+}
+
+.times{
+grid-template-columns:1fr 1fr;
+}
+
+.payment-box{
+padding:17px;
+}
+
+.qr-image{
+width:210px;
+}
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
 <nav>
+
 <div class="wrap navin">
 
 <div class="brand">
 Mohammed <span>Al-Olayan</span>
 </div>
 
-<button class="btn dark" onclick="go('booking')">
+<button
+class="btn dark"
+onclick="go('booking')">
+
 احجز استشارتك
+
 </button>
 
 </div>
+
 </nav>
 
+
+
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
 
@@ -427,32 +646,49 @@ Mohammed <span>Al-Olayan</span>
 </span>
 
 <h1>
+
 عندك فكرة موقع أو تطبيق؟
+
 <br>
+
 <span class="blue">
 لا تبدأ قبل أن تعرف ماذا تحتاج.
 </span>
+
 </h1>
 
 <p class="lead">
+
 جلسة استشارية عملية نراجع فيها فكرتك،
 نحدد نوع المنصة المناسب، نرتب الخصائص،
 ونبني لك خارطة طريق واضحة قبل التصميم والبرمجة.
+
 </p>
+
 
 <div class="cta">
 
-<button class="btn primary" onclick="go('booking')">
+<button
+class="btn primary"
+onclick="go('booking')">
+
 احجز جلسة الآن
+
 </button>
 
-<a class="secondary" href="#how">
+
+<a
+class="secondary"
+href="#how">
+
 كيف تعمل الاستشارة؟
+
 </a>
 
 </div>
 
 </div>
+
 
 
 <div class="heroCard">
@@ -462,35 +698,52 @@ Mohammed <span>Al-Olayan</span>
 </div>
 
 <div class="price">
+
 50,000
-<small>د.ع</small>
+
+<small>
+د.ع
+</small>
+
+</div>
+
+
+<div class="tick">
+<b>✓</b>
+تحليل فكرة المشروع
 </div>
 
 <div class="tick">
-<b>✓</b> تحليل فكرة المشروع
+<b>✓</b>
+تحديد نوع المنصة والمزايا
 </div>
 
 <div class="tick">
-<b>✓</b> تحديد نوع المنصة والمزايا
+<b>✓</b>
+تصور أولي للتكلفة والمدة
 </div>
 
 <div class="tick">
-<b>✓</b> تصور أولي للتكلفة والمدة
+<b>✓</b>
+خارطة طريق للتنفيذ
 </div>
 
 <div class="tick">
-<b>✓</b> خارطة طريق للتنفيذ
-</div>
-
-<div class="tick">
-<b>✓</b> يخصم المبلغ من تكلفة التنفيذ عند التعاقد
+<b>✓</b>
+يخصم المبلغ من تكلفة التنفيذ عند التعاقد
 </div>
 
 </div>
 
 </div>
+
 </header>
 
+
+
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section id="how">
 
@@ -511,9 +764,12 @@ Mohammed <span>Al-Olayan</span>
 
 <div class="cards">
 
+
 <div class="card">
 
-<div class="icon">💡</div>
+<div class="icon">
+💡
+</div>
 
 <h3>
 فهم الفكرة
@@ -526,9 +782,12 @@ Mohammed <span>Al-Olayan</span>
 </div>
 
 
+
 <div class="card">
 
-<div class="icon">🧩</div>
+<div class="icon">
+🧩
+</div>
 
 <h3>
 اختيار المنصة
@@ -541,9 +800,12 @@ Mohammed <span>Al-Olayan</span>
 </div>
 
 
+
 <div class="card">
 
-<div class="icon">⚙️</div>
+<div class="icon">
+⚙️
+</div>
 
 <h3>
 تحديد الخصائص
@@ -556,9 +818,12 @@ Mohammed <span>Al-Olayan</span>
 </div>
 
 
+
 <div class="card">
 
-<div class="icon">📊</div>
+<div class="icon">
+📊
+</div>
 
 <h3>
 تقدير المشروع
@@ -571,9 +836,12 @@ Mohammed <span>Al-Olayan</span>
 </div>
 
 
+
 <div class="card">
 
-<div class="icon">🗺️</div>
+<div class="icon">
+🗺️
+</div>
 
 <h3>
 خارطة الطريق
@@ -586,9 +854,12 @@ Mohammed <span>Al-Olayan</span>
 </div>
 
 
+
 <div class="card">
 
-<div class="icon">🎯</div>
+<div class="icon">
+🎯
+</div>
 
 <h3>
 قرار أوضح
@@ -600,10 +871,18 @@ Mohammed <span>Al-Olayan</span>
 
 </div>
 
+
 </div>
+
 </div>
+
 </section>
 
+
+
+<!-- =========================
+     PROJECT JOURNEY
+========================= -->
 
 <section style="background:#eef5fb">
 
@@ -624,42 +903,107 @@ Mohammed <span>Al-Olayan</span>
 
 <div class="steps">
 
-<div class="step">
-<div class="num">01</div>
-<h3>تحجز</h3>
-<p>تختار الموعد.</p>
-</div>
 
 <div class="step">
-<div class="num">02</div>
-<h3>ترسل فكرتك</h3>
-<p>تعبئ التفاصيل.</p>
+
+<div class="num">
+01
 </div>
+
+<h3>
+تحجز
+</h3>
+
+<p>
+تختار الموعد.
+</p>
+
+</div>
+
 
 <div class="step">
-<div class="num">03</div>
-<h3>نناقشها</h3>
-<p>جلسة 60 دقيقة.</p>
+
+<div class="num">
+02
 </div>
+
+<h3>
+ترسل فكرتك
+</h3>
+
+<p>
+تعبئ التفاصيل.
+</p>
+
+</div>
+
 
 <div class="step">
-<div class="num">04</div>
-<h3>نخطط</h3>
-<p>نحدد الأولويات.</p>
+
+<div class="num">
+03
 </div>
+
+<h3>
+نناقشها
+</h3>
+
+<p>
+جلسة 60 دقيقة.
+</p>
+
+</div>
+
 
 <div class="step">
-<div class="num">05</div>
-<h3>تنفذ</h3>
-<p>تبدأ بخطة واضحة.</p>
+
+<div class="num">
+04
+</div>
+
+<h3>
+نخطط
+</h3>
+
+<p>
+نحدد الأولويات.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="num">
+05
+</div>
+
+<h3>
+تنفذ
+</h3>
+
+<p>
+تبدأ بخطة واضحة.
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
-<section class="booking" id="booking">
+
+<!-- =========================
+     BOOKING
+========================= -->
+
+<section
+class="booking"
+id="booking">
 
 <div class="wrap bookingGrid">
 
@@ -670,29 +1014,56 @@ Mohammed <span>Al-Olayan</span>
 احجز الآن
 </span>
 
-<h2 style="font-size:38px;margin:15px 0">
+<h2
+style="font-size:38px;margin:15px 0">
+
 خلّينا نناقش فكرتك.
+
 </h2>
 
 <p>
+
 املأ النموذج وسأستخدم المعلومات لفهم المشروع قبل الجلسة
 حتى يكون وقت الاستشارة مركزًا على القرارات المهمة.
+
 </p>
 
+
 <ul>
-<li>60 دقيقة</li>
-<li>استشارة أونلاين</li>
-<li>50,000 د.ع</li>
-<li>تُخصم من تكلفة التنفيذ عند التعاقد</li>
+
+<li>
+60 دقيقة
+</li>
+
+<li>
+استشارة أونلاين
+</li>
+
+<li>
+50,000 د.ع
+</li>
+
+<li>
+تُخصم من تكلفة التنفيذ عند التعاقد
+</li>
+
 </ul>
 
 </div>
 
 
-<form class="form" id="form">
+
+<!-- FORM -->
+
+<form
+class="form"
+id="form">
+
 
 <div class="formGrid">
 
+
+<!-- NAME -->
 
 <div class="field">
 
@@ -700,10 +1071,16 @@ Mohammed <span>Al-Olayan</span>
 الاسم الكامل *
 </label>
 
-<input id="name" required>
+<input
+id="name"
+required
+placeholder="اكتب اسمك">
 
 </div>
 
+
+
+<!-- PHONE -->
 
 <div class="field">
 
@@ -714,11 +1091,13 @@ Mohammed <span>Al-Olayan</span>
 <input
 id="phone"
 required
-placeholder="07xxxxxxxxx"
->
+placeholder="07xxxxxxxxx">
 
 </div>
 
+
+
+<!-- PROJECT TYPE -->
 
 <div class="field">
 
@@ -726,7 +1105,9 @@ placeholder="07xxxxxxxxx"
 نوع المشروع *
 </label>
 
-<select id="type" required>
+<select
+id="type"
+required>
 
 <option value="">
 اختر
@@ -761,6 +1142,9 @@ Web App / منصة
 </div>
 
 
+
+<!-- BUDGET -->
+
 <div class="field">
 
 <label>
@@ -794,6 +1178,9 @@ Web App / منصة
 </div>
 
 
+
+<!-- DATE -->
+
 <div class="field full">
 
 <label>
@@ -803,11 +1190,13 @@ Web App / منصة
 <input
 id="date"
 type="date"
-required
->
+required>
 
 </div>
 
+
+
+<!-- TIME -->
 
 <div class="field full">
 
@@ -815,16 +1204,21 @@ required
 الوقت *
 </label>
 
-<div class="times" id="times"></div>
+<div
+class="times"
+id="times">
+</div>
 
 <input
 id="time"
 type="hidden"
-required
->
+required>
 
 </div>
 
+
+
+<!-- IDEA -->
 
 <div class="field full">
 
@@ -835,32 +1229,111 @@ required
 <textarea
 id="idea"
 required
-placeholder="ما الذي تريد بناءه؟ ومن سيستخدمه؟ وما أهم شيء تريد أن يفعله؟"
-></textarea>
+placeholder="ما الذي تريد بناءه؟ ومن سيستخدمه؟ وما أهم شيء تريد أن يفعله؟"></textarea>
+
+</div>
+
+
+</div>
+
+
+
+<!-- =========================
+     PAYMENT
+========================= -->
+
+<div class="payment-box">
+
+<h3>
+💳 ادفع الآن
+</h3>
+
+<p>
+
+لإتمام حجز الاستشارة،
+يمكنك الدفع باستخدام رمز QR
+أو رقم التحويل التالي.
+
+</p>
+
+
+<!-- QR IMAGE -->
+
+<img
+src="payment-qr.jpeg"
+alt="QR Code للدفع"
+class="qr-image"
+>
+
+
+<span class="transfer-label">
+رقم التحويل
+</span>
+
+
+<div class="transfer-number">
+4918107287
+</div>
+
+
+<button
+type="button"
+class="pay-button"
+onclick="showPaymentMessage()">
+
+ادفع الآن
+
+</button>
+
+
+<div class="payment-note">
+
+بعد إتمام التحويل، احتفظ بصورة الإيصال
+لإرسالها عند تأكيد الحجز.
 
 </div>
 
 </div>
 
 
-<button class="submit">
+
+<!-- SUBMIT -->
+
+<button
+type="submit"
+class="submit">
+
 تأكيد طلب حجز الاستشارة
+
 </button>
 
 
 <div class="note">
-هذه نسخة MVP: تفتح WhatsApp لتأكيد الطلب.
-يمكن ربطها لاحقًا ببوابة دفع وتقويم وقاعدة بيانات.
+
+بعد إرسال الطلب سيتم فتح WhatsApp
+لتأكيد الحجز.
+
 </div>
 
 
-<div class="result" id="result"></div>
+<div
+class="result"
+id="result">
+
+</div>
+
 
 </form>
 
 </div>
+
 </section>
 
+
+
+<!-- =========================
+     FAQ
+========================= -->
 
 <section>
 
@@ -888,6 +1361,7 @@ placeholder="ما الذي تريد بناءه؟ ومن سيستخدمه؟ وم�
 </details>
 
 
+
 <details>
 
 <summary>
@@ -899,6 +1373,7 @@ placeholder="ما الذي تريد بناءه؟ ومن سيستخدمه؟ وم�
 </p>
 
 </details>
+
 
 
 <details>
@@ -913,9 +1388,30 @@ placeholder="ما الذي تريد بناءه؟ ومن سيستخدمه؟ وم�
 
 </details>
 
+
+<details>
+
+<summary>
+كيف يتم الدفع؟
+</summary>
+
+<p>
+يمكنك الدفع من خلال رمز QR الموجود في نموذج الحجز
+أو باستخدام رقم التحويل 4918107287.
+</p>
+
+</details>
+
+
 </div>
+
 </section>
 
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -934,12 +1430,28 @@ placeholder="ما الذي تريد بناءه؟ ومن سيستخدمه؟ وم�
 </footer>
 
 
-<a class="wa" id="wa" target="_blank">
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<a
+class="wa"
+id="wa"
+target="_blank">
+
 WhatsApp
+
 </a>
 
 
+
 <script>
+
+
+/* =========================
+   SCROLL
+========================= */
 
 function go(id){
 
@@ -951,6 +1463,11 @@ behavior:'smooth'
 
 }
 
+
+
+/* =========================
+   TIME SLOTS
+========================= */
 
 const slots=[
 
@@ -964,7 +1481,7 @@ const slots=[
 ];
 
 
-slots.forEach(t=>{
+slots.forEach(function(t){
 
 let b=document.createElement('button');
 
@@ -974,13 +1491,20 @@ b.className='time';
 
 b.textContent=t;
 
-b.onclick=()=>{
+
+b.onclick=function(){
 
 document
 .querySelectorAll('.time')
-.forEach(x=>x.classList.remove('active'));
+.forEach(function(x){
+
+x.classList.remove('active');
+
+});
+
 
 b.classList.add('active');
+
 
 document
 .getElementById('time')
@@ -988,12 +1512,18 @@ document
 
 };
 
+
 document
 .getElementById('times')
 .appendChild(b);
 
 });
 
+
+
+/* =========================
+   DATE
+========================= */
 
 let d=document.getElementById('date');
 
@@ -1006,61 +1536,140 @@ now-now.getTimezoneOffset()*60000
 .slice(0,10);
 
 
+
+/* =========================
+   WHATSAPP NUMBER
+========================= */
+
 const WA='9647857275552';
 
 
-document.getElementById('wa').href=
-'https://wa.me/'+WA;
+document
+.getElementById('wa')
+.href='https://wa.me/'+WA;
 
 
-document.getElementById('form').onsubmit=e=>{
+
+/* =========================
+   PAYMENT MESSAGE
+========================= */
+
+function showPaymentMessage(){
+
+alert(
+'رقم التحويل: 4918107287\n\nبعد إتمام التحويل، احتفظ بصورة الإيصال ثم أكمل بيانات الحجز واضغط على "تأكيد طلب حجز الاستشارة".'
+);
+
+}
+
+
+
+/* =========================
+   BOOKING FORM
+========================= */
+
+document
+.getElementById('form')
+.onsubmit=function(e){
 
 e.preventDefault();
 
 
-if(!document.getElementById('time').value)
+/* CHECK TIME */
 
-return alert(
+if(
+!document
+.getElementById('time')
+.value
+){
+
+alert(
 'يرجى اختيار وقت الاستشارة'
 );
 
+return;
 
-let v=id=>
-document.getElementById(id).value;
-
-
-let msg=
-
-`طلب حجز استشارة
-الاسم: ${encodeURIComponent(v('name'))}
-WhatsApp: ${encodeURIComponent(v('phone'))}
-نوع المشروع: ${encodeURIComponent(v('type'))}
-الميزانية: ${encodeURIComponent(v('budget'))}
-التاريخ: ${encodeURIComponent(v('date'))}
-الوقت: ${encodeURIComponent(v('time'))}
-الفكرة: ${encodeURIComponent(v('idea'))}`;
+}
 
 
-document
-.getElementById('result')
-.style.display='block';
+/* GET VALUES */
+
+let v=function(id){
+
+return document
+.getElementById(id)
+.value;
+
+};
 
 
-document
-.getElementById('result')
-.textContent=
-'تم تجهيز الطلب، سيتم فتح WhatsApp لتأكيد الحجز.';
+let name=v('name');
+let phone=v('phone');
+let type=v('type');
+let budget=v('budget');
+let date=v('date');
+let time=v('time');
+let idea=v('idea');
+
+
+/* WHATSAPP MESSAGE */
+
+let message=
+
+'طلب حجز استشارة\n\n'+
+
+'الاسم: '+name+'\n'+
+
+'WhatsApp: '+phone+'\n'+
+
+'نوع المشروع: '+type+'\n'+
+
+'الميزانية: '+budget+'\n'+
+
+'التاريخ: '+date+'\n'+
+
+'الوقت: '+time+'\n'+
+
+'الفكرة: '+idea+'\n\n'+
+
+'رقم التحويل: 4918107287\n'+
+
+'رسوم الاستشارة: 50,000 د.ع';
+
+
+
+/* RESULT */
+
+let result=
+document.getElementById('result');
+
+result.style.display='block';
+
+result.textContent=
+'تم تجهيز طلب الحجز. سيتم فتح WhatsApp لتأكيد الحجز.';
+
+
+
+/* OPEN WHATSAPP */
+
+let whatsappURL=
+'https://wa.me/'+
+WA+
+'?text='+
+encodeURIComponent(message);
 
 
 window.open(
-'https://wa.me/'+WA+
-'?text='+encodeURIComponent(msg),
+whatsappURL,
 '_blank'
 );
 
 };
 
+
 </script>
 
+
 </body>
+
 </html>
