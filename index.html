@@ -1,599 +1,682 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
-
-<meta charset="utf-8">
-
-<meta name="viewport"
-content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>
-استشارة ما قبل تنفيذ المشروع | Mohammed Al-Olayan
+Mohammed Al-Olayan | استشارة ما قبل تنفيذ المشروع
 </title>
 
 <style>
 
+/* =========================
+   BASIC
+========================= */
+
 :root{
---n:#081a33;
---b:#1687ff;
---bg:#f5f8fc;
---t:#10233f;
---m:#65748a;
---l:#dfe7f0;
+    --navy:#081a33;
+    --blue:#1687ff;
+    --blue2:#13a7ff;
+    --bg:#f5f8fc;
+    --text:#10233f;
+    --muted:#65748a;
+    --border:#dfe7f0;
+    --green:#18b86a;
 }
 
 *{
-box-sizing:border-box;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-margin:0;
-font-family:Arial,sans-serif;
-background:var(--bg);
-color:var(--t);
-line-height:1.7;
+    margin:0;
+    font-family:Arial,Tahoma,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
 }
 
-a{
-text-decoration:none;
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
 }
 
 button{
-cursor:pointer;
-font-family:inherit;
+    cursor:pointer;
 }
+
+a{
+    text-decoration:none;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
 
 .wrap{
-max-width:1180px;
-margin:auto;
-padding:0 22px;
+    max-width:1180px;
+    margin:auto;
+    padding:0 22px;
 }
 
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 nav{
-height:76px;
-background:#fff;
-border-bottom:1px solid var(--l);
-display:flex;
-align-items:center;
-position:sticky;
-top:0;
-z-index:20;
+    height:76px;
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
 .navin{
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .brand{
-font-weight:800;
-font-size:20px;
+    font-size:21px;
+    font-weight:800;
+    color:var(--navy);
 }
 
 .brand span{
-color:var(--b);
+    color:var(--blue);
 }
 
-.btn{
-border:0;
-border-radius:13px;
-padding:12px 20px;
-font-weight:800;
-font-size:15px;
-}
-
-.dark{
-background:var(--n);
-color:#fff;
+.nav-button{
+    border:0;
+    background:var(--navy);
+    color:#fff;
+    padding:13px 22px;
+    border-radius:14px;
+    font-weight:800;
+    font-size:15px;
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
-padding:80px 0 65px;
-background:linear-gradient(
-135deg,
-#fff,
-#edf5ff
-);
+    padding:80px 0 70px;
+    background:linear-gradient(
+        135deg,
+        #ffffff,
+        #edf5ff
+    );
 }
 
-.grid{
-display:grid;
-grid-template-columns:1.15fr .85fr;
-gap:45px;
-align-items:center;
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:45px;
+    align-items:center;
 }
 
 .badge{
-display:inline-block;
-padding:7px 13px;
-border-radius:30px;
-background:#e8f5ff;
-color:#0875dc;
-font-weight:700;
-font-size:14px;
+    display:inline-block;
+    background:#e8f5ff;
+    color:#0875dc;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:800;
 }
 
 h1{
-font-size:48px;
-line-height:1.2;
-margin:18px 0;
+    font-size:49px;
+    line-height:1.2;
+    margin:20px 0;
 }
 
 .blue{
-color:var(--b);
+    color:var(--blue);
 }
 
 .lead{
-font-size:19px;
-color:var(--m);
-max-width:700px;
+    color:var(--muted);
+    font-size:19px;
+    max-width:720px;
 }
 
-.cta{
-display:flex;
-gap:12px;
-margin-top:25px;
-flex-wrap:wrap;
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:28px;
+    flex-wrap:wrap;
 }
 
-.primary{
-background:linear-gradient(
-135deg,
-#0c65d8,
-#13a7ff
-);
-color:#fff;
+.primary-button{
+    border:0;
+    background:linear-gradient(
+        135deg,
+        #0c65d8,
+        #13a7ff
+    );
+    color:#fff;
+    border-radius:14px;
+    padding:14px 23px;
+    font-weight:800;
+    font-size:16px;
 }
 
-.secondary{
-background:#fff;
-border:1px solid var(--l);
-border-radius:13px;
-padding:12px 20px;
-font-weight:700;
-color:var(--t);
+.secondary-button{
+    background:#fff;
+    border:1px solid var(--border);
+    color:var(--navy);
+    border-radius:14px;
+    padding:14px 23px;
+    font-weight:800;
+    font-size:16px;
 }
 
 
-/* PRICE CARD */
+/* =========================
+   PRICE CARD
+========================= */
 
-.heroCard{
-background:var(--n);
-color:#fff;
-border-radius:28px;
-padding:28px;
-box-shadow:0 22px 55px #0a1d3820;
+.price-card{
+    background:var(--navy);
+    color:#fff;
+    border-radius:28px;
+    padding:30px;
+    box-shadow:0 20px 50px rgba(8,26,51,.15);
+}
+
+.price-title{
+    font-size:17px;
 }
 
 .price{
-font-size:38px;
-font-weight:900;
-margin:8px 0 18px;
+    font-size:42px;
+    font-weight:900;
+    margin:7px 0 20px;
 }
 
 .price small{
-font-size:15px;
-color:#b7c7da;
+    font-size:16px;
+    color:#b7c7da;
 }
 
-.tick{
-margin:10px 0;
-color:#eaf4ff;
+.check{
+    margin:12px 0;
+    color:#edf6ff;
 }
 
-.tick b{
-color:#42c8ff;
+.check span{
+    color:#42c8ff;
+    font-weight:900;
 }
 
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
-padding:70px 0;
+    padding:75px 0;
 }
 
-.head{
-text-align:center;
-max-width:720px;
-margin:0 auto 38px;
+.section-title{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 40px;
 }
 
-.head h2{
-font-size:34px;
-margin:0;
+.section-title h2{
+    font-size:35px;
+    margin:0 0 10px;
 }
 
-.head p{
-color:var(--m);
+.section-title p{
+    color:var(--muted);
 }
 
 
-/* CARDS */
+/* =========================
+   CARDS
+========================= */
 
 .cards{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
 }
 
-.card,
-.step,
-.form,
-details{
-background:#fff;
-border:1px solid var(--l);
-border-radius:20px;
-padding:23px;
+.card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:25px;
 }
 
-.icon{
-font-size:24px;
+.card-icon{
+    font-size:27px;
 }
 
 .card h3{
-margin:8px 0;
+    margin:9px 0;
 }
 
-.card p,
-.step p,
-details p{
-color:var(--m);
-margin:0;
+.card p{
+    color:var(--muted);
+    margin:0;
 }
 
 
-/* STEPS */
+/* =========================
+   STEPS
+========================= */
+
+.steps-section{
+    background:#eef5fb;
+}
 
 .steps{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:12px;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
 }
 
 .step{
-text-align:center;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:23px;
+    text-align:center;
 }
 
-.num{
-color:var(--b);
-font-weight:800;
-font-size:20px;
+.step-number{
+    color:var(--blue);
+    font-size:21px;
+    font-weight:900;
+}
+
+.step p{
+    color:var(--muted);
+    margin:0;
 }
 
 
-/* BOOKING */
+/* =========================
+   BOOKING
+========================= */
 
 .booking{
-background:var(--n);
-color:#fff;
+    background:var(--navy);
+    color:#fff;
 }
 
-.bookingGrid{
-display:grid;
-grid-template-columns:.85fr 1.15fr;
-gap:35px;
+.booking-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:35px;
+    align-items:start;
 }
 
-.copy p{
-color:#bdcce0;
+.booking-description p{
+    color:#bdcce0;
 }
+
+.booking-description li{
+    margin:8px 0;
+}
+
+
+/* =========================
+   FORM
+========================= */
 
 .form{
-color:var(--t);
+    background:#fff;
+    color:var(--text);
+    border-radius:22px;
+    padding:25px;
 }
 
-.formGrid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
 }
 
 .field{
-display:flex;
-flex-direction:column;
-gap:6px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
 }
 
 .full{
-grid-column:1/-1;
+    grid-column:1/-1;
+}
+
+label{
+    font-weight:700;
 }
 
 input,
 select,
 textarea{
-font:inherit;
-border:1px solid var(--l);
-border-radius:11px;
-padding:11px;
-outline:0;
-width:100%;
+    width:100%;
+    border:1px solid var(--border);
+    border-radius:11px;
+    padding:12px;
+    font-size:15px;
+    outline:none;
+    background:#fff;
 }
 
 input:focus,
 select:focus,
 textarea:focus{
-border-color:var(--b);
+    border-color:var(--blue);
 }
 
 textarea{
-min-height:100px;
-resize:vertical;
+    min-height:110px;
+    resize:vertical;
 }
 
 
-/* TIME */
+/* =========================
+   TIME BUTTONS
+========================= */
 
 .times{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:8px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
 }
 
-.time{
-border:1px solid var(--l);
-background:#fff;
-border-radius:10px;
-padding:9px;
+.time-button{
+    border:1px solid var(--border);
+    background:#fff;
+    color:var(--text);
+    border-radius:10px;
+    padding:10px;
 }
 
-.time.active{
-background:#eaf6ff;
-border-color:var(--b);
-color:#0568cb;
-font-weight:800;
+.time-button.active{
+    background:#eaf6ff;
+    border-color:var(--blue);
+    color:#0568cb;
+    font-weight:800;
 }
 
 
-/* PAYMENT */
+/* =========================
+   PAYMENT
+========================= */
 
 .payment-box{
-margin-top:25px;
-background:#f7faff;
-border:1px solid var(--l);
-border-radius:20px;
-padding:22px;
-text-align:center;
+    margin-top:25px;
+    background:#f7faff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:24px;
+    text-align:center;
 }
 
 .payment-box h3{
-margin:0 0 8px;
-color:#081a33;
-font-size:23px;
+    margin:0 0 8px;
+    color:var(--navy);
+    font-size:25px;
 }
 
 .payment-box p{
-color:#65748a;
-margin:5px 0 15px;
+    color:var(--muted);
+    margin:5px 0 18px;
 }
 
-.qr-image{
-width:230px;
-max-width:100%;
-display:block;
-margin:15px auto;
-border-radius:16px;
-}
+
+/* PAYMENT NUMBER */
 
 .transfer-label{
-display:block;
-font-size:13px;
-color:#65748a;
-margin-bottom:5px;
+    display:block;
+    font-size:14px;
+    color:var(--muted);
+    margin-bottom:6px;
 }
 
 .transfer-number{
-background:#081a33;
-color:#fff;
-border-radius:12px;
-padding:12px;
-margin:15px 0;
-font-size:21px;
-font-weight:800;
-letter-spacing:1px;
-direction:ltr;
+    background:var(--navy);
+    color:#fff;
+    border-radius:13px;
+    padding:15px;
+    margin:10px 0 15px;
+    font-size:27px;
+    font-weight:900;
+    letter-spacing:2px;
+    direction:ltr;
 }
 
+
+/* COPY BUTTON */
+
+.copy-button{
+    width:100%;
+    border:0;
+    border-radius:12px;
+    padding:13px;
+    background:#1687ff;
+    color:#fff;
+    font-size:16px;
+    font-weight:800;
+}
+
+.copy-message{
+    display:none;
+    margin-top:10px;
+    background:#e9fff5;
+    color:#08704b;
+    border-radius:10px;
+    padding:10px;
+    font-size:14px;
+}
+
+
+/* PAY BUTTON */
+
 .pay-button{
-display:block;
-width:100%;
-background:linear-gradient(
-135deg,
-#0c65d8,
-#13a7ff
-);
-color:#fff;
-border:0;
-border-radius:12px;
-padding:14px;
-font-size:17px;
-font-weight:800;
-cursor:pointer;
+    display:block;
+    width:100%;
+    margin-top:12px;
+    background:linear-gradient(
+        135deg,
+        #0c65d8,
+        #13a7ff
+    );
+    color:#fff;
+    border:0;
+    border-radius:12px;
+    padding:15px;
+    font-size:17px;
+    font-weight:800;
 }
 
 .payment-note{
-font-size:12px;
-color:#77869a;
-margin-top:10px;
+    font-size:12px;
+    color:#77869a;
+    margin-top:12px;
 }
 
 
-/* SUBMIT */
+/* =========================
+   SUBMIT
+========================= */
 
-.submit{
-width:100%;
-margin-top:16px;
-padding:14px;
-border:0;
-border-radius:12px;
-background:linear-gradient(
-135deg,
-#0c65d8,
-#13a7ff
-);
-color:#fff;
-font-weight:800;
-font-size:16px;
+.submit-button{
+    width:100%;
+    margin-top:18px;
+    padding:15px;
+    border:0;
+    border-radius:13px;
+    background:linear-gradient(
+        135deg,
+        #0c65d8,
+        #13a7ff
+    );
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
 }
 
 .result{
-display:none;
-margin-top:14px;
-padding:14px;
-border-radius:12px;
-background:#e9fff5;
-color:#0d704b;
-}
-
-.note{
-font-size:12px;
-color:#77869a;
-margin-top:8px;
+    display:none;
+    margin-top:15px;
+    padding:13px;
+    border-radius:11px;
+    background:#e9fff5;
+    color:#08704b;
 }
 
 
-/* FAQ */
+/* =========================
+   FAQ
+========================= */
 
 .faq{
-max-width:850px;
-margin:auto;
+    max-width:850px;
+    margin:auto;
 }
 
 details{
-margin:10px 0;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:18px;
+    margin:10px 0;
 }
 
 summary{
-font-weight:800;
-cursor:pointer;
+    font-weight:800;
+    cursor:pointer;
+}
+
+details p{
+    color:var(--muted);
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-padding:30px 0;
-background:#061427;
-color:#b9c7d9;
+    background:#061427;
+    color:#b9c7d9;
+    padding:30px 0;
 }
 
-.foot{
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-gap:10px;
-}
-
-
-/* WHATSAPP */
-
-.wa{
-position:fixed;
-left:20px;
-bottom:20px;
-background:#18b86a;
-color:#fff;
-padding:13px 18px;
-border-radius:50px;
-font-weight:800;
-z-index:30;
-box-shadow:0 8px 25px #0002;
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
 
-/* MOBILE */
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    z-index:200;
+    background:var(--green);
+    color:#fff;
+    padding:14px 20px;
+    border-radius:50px;
+    font-weight:900;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:850px){
 
-.grid,
-.bookingGrid{
-grid-template-columns:1fr;
-}
+    .hero-grid,
+    .booking-grid{
+        grid-template-columns:1fr;
+    }
 
-.cards{
-grid-template-columns:1fr;
-}
+    .cards{
+        grid-template-columns:1fr;
+    }
 
-.steps{
-grid-template-columns:1fr 1fr;
-}
+    .steps{
+        grid-template-columns:1fr 1fr;
+    }
 
-h1{
-font-size:37px;
-}
+    h1{
+        font-size:38px;
+    }
 
-.formGrid{
-grid-template-columns:1fr;
-}
+    .form-grid{
+        grid-template-columns:1fr;
+    }
 
-.full{
-grid-column:auto;
-}
-
-.times{
-grid-template-columns:1fr 1fr;
-}
-
-.hero{
-padding-top:55px;
-}
-
-.heroCard{
-margin-top:10px;
-}
+    .full{
+        grid-column:auto;
+    }
 
 }
+
 
 @media(max-width:500px){
 
-nav{
-height:70px;
-}
+    .brand{
+        font-size:17px;
+    }
 
-.brand{
-font-size:16px;
-}
+    .nav-button{
+        padding:10px 14px;
+        font-size:13px;
+    }
 
-.navin .btn{
-padding:10px 13px;
-font-size:13px;
-}
+    h1{
+        font-size:32px;
+    }
 
-h1{
-font-size:32px;
-}
+    .lead{
+        font-size:17px;
+    }
 
-.lead{
-font-size:17px;
-}
+    .steps{
+        grid-template-columns:1fr;
+    }
 
-.steps{
-grid-template-columns:1fr;
-}
+    .times{
+        grid-template-columns:1fr 1fr;
+    }
 
-.times{
-grid-template-columns:1fr 1fr;
-}
-
-.payment-box{
-padding:17px;
-}
-
-.qr-image{
-width:210px;
-}
+    .transfer-number{
+        font-size:22px;
+    }
 
 }
 
@@ -606,7 +689,7 @@ width:210px;
 
 
 <!-- =========================
-     NAVBAR
+     NAVIGATION
 ========================= -->
 
 <nav>
@@ -618,8 +701,8 @@ Mohammed <span>Al-Olayan</span>
 </div>
 
 <button
-class="btn dark"
-onclick="go('booking')">
+class="nav-button"
+onclick="scrollToBooking()">
 
 احجز استشارتك
 
@@ -637,13 +720,15 @@ onclick="go('booking')">
 
 <header class="hero">
 
-<div class="wrap grid">
+<div class="wrap hero-grid">
+
 
 <div>
 
 <span class="badge">
 استشارة ما قبل تنفيذ المشروع
 </span>
+
 
 <h1>
 
@@ -657,6 +742,7 @@ onclick="go('booking')">
 
 </h1>
 
+
 <p class="lead">
 
 جلسة استشارية عملية نراجع فيها فكرتك،
@@ -666,11 +752,11 @@ onclick="go('booking')">
 </p>
 
 
-<div class="cta">
+<div class="hero-buttons">
 
 <button
-class="btn primary"
-onclick="go('booking')">
+class="primary-button"
+onclick="scrollToBooking()">
 
 احجز جلسة الآن
 
@@ -678,8 +764,8 @@ onclick="go('booking')">
 
 
 <a
-class="secondary"
-href="#how">
+href="#how"
+class="secondary-button">
 
 كيف تعمل الاستشارة؟
 
@@ -691,45 +777,44 @@ href="#how">
 
 
 
-<div class="heroCard">
+<div class="price-card">
 
-<div>
+<div class="price-title">
 جلسة واحدة • 60 دقيقة
 </div>
 
 <div class="price">
-
 50,000
-
-<small>
-د.ع
-</small>
-
+<small>د.ع</small>
 </div>
 
 
-<div class="tick">
-<b>✓</b>
+<div class="check">
+<span>✓</span>
 تحليل فكرة المشروع
 </div>
 
-<div class="tick">
-<b>✓</b>
+
+<div class="check">
+<span>✓</span>
 تحديد نوع المنصة والمزايا
 </div>
 
-<div class="tick">
-<b>✓</b>
+
+<div class="check">
+<span>✓</span>
 تصور أولي للتكلفة والمدة
 </div>
 
-<div class="tick">
-<b>✓</b>
+
+<div class="check">
+<span>✓</span>
 خارطة طريق للتنفيذ
 </div>
 
-<div class="tick">
-<b>✓</b>
+
+<div class="check">
+<span>✓</span>
 يخصم المبلغ من تكلفة التنفيذ عند التعاقد
 </div>
 
@@ -742,14 +827,14 @@ href="#how">
 
 
 <!-- =========================
-     SERVICES
+     WHAT WE DO
 ========================= -->
 
 <section id="how">
 
 <div class="wrap">
 
-<div class="head">
+<div class="section-title">
 
 <h2>
 ماذا ننجز خلال الجلسة؟
@@ -767,9 +852,7 @@ href="#how">
 
 <div class="card">
 
-<div class="icon">
-💡
-</div>
+<div class="card-icon">💡</div>
 
 <h3>
 فهم الفكرة
@@ -782,12 +865,9 @@ href="#how">
 </div>
 
 
-
 <div class="card">
 
-<div class="icon">
-🧩
-</div>
+<div class="card-icon">🧩</div>
 
 <h3>
 اختيار المنصة
@@ -800,12 +880,9 @@ href="#how">
 </div>
 
 
-
 <div class="card">
 
-<div class="icon">
-⚙️
-</div>
+<div class="card-icon">⚙️</div>
 
 <h3>
 تحديد الخصائص
@@ -818,12 +895,9 @@ href="#how">
 </div>
 
 
-
 <div class="card">
 
-<div class="icon">
-📊
-</div>
+<div class="card-icon">📊</div>
 
 <h3>
 تقدير المشروع
@@ -836,12 +910,9 @@ href="#how">
 </div>
 
 
-
 <div class="card">
 
-<div class="icon">
-🗺️
-</div>
+<div class="card-icon">🗺️</div>
 
 <h3>
 خارطة الطريق
@@ -854,12 +925,9 @@ href="#how">
 </div>
 
 
-
 <div class="card">
 
-<div class="icon">
-🎯
-</div>
+<div class="card-icon">🎯</div>
 
 <h3>
 قرار أوضح
@@ -881,14 +949,14 @@ href="#how">
 
 
 <!-- =========================
-     PROJECT JOURNEY
+     STEPS
 ========================= -->
 
-<section style="background:#eef5fb">
+<section class="steps-section">
 
 <div class="wrap">
 
-<div class="head">
+<div class="section-title">
 
 <h2>
 رحلة مشروعك
@@ -906,7 +974,7 @@ href="#how">
 
 <div class="step">
 
-<div class="num">
+<div class="step-number">
 01
 </div>
 
@@ -923,7 +991,7 @@ href="#how">
 
 <div class="step">
 
-<div class="num">
+<div class="step-number">
 02
 </div>
 
@@ -940,7 +1008,7 @@ href="#how">
 
 <div class="step">
 
-<div class="num">
+<div class="step-number">
 03
 </div>
 
@@ -957,7 +1025,7 @@ href="#how">
 
 <div class="step">
 
-<div class="num">
+<div class="step-number">
 04
 </div>
 
@@ -974,7 +1042,7 @@ href="#how">
 
 <div class="step">
 
-<div class="num">
+<div class="step-number">
 05
 </div>
 
@@ -998,28 +1066,29 @@ href="#how">
 
 
 <!-- =========================
-     BOOKING
+     BOOKING + PAYMENT
 ========================= -->
 
 <section
 class="booking"
 id="booking">
 
-<div class="wrap bookingGrid">
+<div class="wrap booking-grid">
 
 
-<div class="copy">
+<div class="booking-description">
 
 <span class="badge">
 احجز الآن
 </span>
 
-<h2
-style="font-size:38px;margin:15px 0">
+
+<h2 style="font-size:38px;margin:15px 0">
 
 خلّينا نناقش فكرتك.
 
 </h2>
+
 
 <p>
 
@@ -1031,21 +1100,13 @@ style="font-size:38px;margin:15px 0">
 
 <ul>
 
-<li>
-60 دقيقة
-</li>
+<li>60 دقيقة</li>
 
-<li>
-استشارة أونلاين
-</li>
+<li>استشارة أونلاين</li>
 
-<li>
-50,000 د.ع
-</li>
+<li>50,000 د.ع</li>
 
-<li>
-تُخصم من تكلفة التنفيذ عند التعاقد
-</li>
+<li>تُخصم من تكلفة التنفيذ عند التعاقد</li>
 
 </ul>
 
@@ -1057,13 +1118,11 @@ style="font-size:38px;margin:15px 0">
 
 <form
 class="form"
-id="form">
+id="bookingForm">
 
 
-<div class="formGrid">
+<div class="form-grid">
 
-
-<!-- NAME -->
 
 <div class="field">
 
@@ -1073,14 +1132,12 @@ id="form">
 
 <input
 id="name"
-required
-placeholder="اكتب اسمك">
+type="text"
+placeholder="اكتب اسمك"
+required>
 
 </div>
 
-
-
-<!-- PHONE -->
 
 <div class="field">
 
@@ -1090,14 +1147,12 @@ placeholder="اكتب اسمك">
 
 <input
 id="phone"
-required
-placeholder="07xxxxxxxxx">
+type="tel"
+placeholder="07xxxxxxxxx"
+required>
 
 </div>
 
-
-
-<!-- PROJECT TYPE -->
 
 <div class="field">
 
@@ -1106,11 +1161,11 @@ placeholder="07xxxxxxxxx">
 </label>
 
 <select
-id="type"
+id="projectType"
 required>
 
 <option value="">
-اختر
+اختر نوع المشروع
 </option>
 
 <option>
@@ -1141,9 +1196,6 @@ Web App / منصة
 
 </div>
 
-
-
-<!-- BUDGET -->
 
 <div class="field">
 
@@ -1178,9 +1230,6 @@ Web App / منصة
 </div>
 
 
-
-<!-- DATE -->
-
 <div class="field full">
 
 <label>
@@ -1195,9 +1244,6 @@ required>
 </div>
 
 
-
-<!-- TIME -->
-
 <div class="field full">
 
 <label>
@@ -1210,15 +1256,12 @@ id="times">
 </div>
 
 <input
-id="time"
+id="selectedTime"
 type="hidden"
 required>
 
 </div>
 
-
-
-<!-- IDEA -->
 
 <div class="field full">
 
@@ -1228,11 +1271,10 @@ required>
 
 <textarea
 id="idea"
-required
-placeholder="ما الذي تريد بناءه؟ ومن سيستخدمه؟ وما أهم شيء تريد أن يفعله؟"></textarea>
+placeholder="ما الذي تريد بناءه؟ ومن سيستخدمه؟ وما أهم شيء تريد أن يفعله؟"
+required></textarea>
 
 </div>
-
 
 </div>
 
@@ -1248,26 +1290,17 @@ placeholder="ما الذي تريد بناءه؟ ومن سيستخدمه؟ وم�
 💳 ادفع الآن
 </h3>
 
+
 <p>
 
 لإتمام حجز الاستشارة،
-يمكنك الدفع باستخدام رمز QR
-أو رقم التحويل التالي.
+استخدم رقم الدفع التالي:
 
 </p>
 
 
-<!-- QR IMAGE -->
-
-<img
-src="payment-qr.jpeg"
-alt="QR Code للدفع"
-class="qr-image"
->
-
-
 <span class="transfer-label">
-رقم التحويل
+رقم الدفع / التحويل
 </span>
 
 
@@ -1278,10 +1311,29 @@ class="qr-image"
 
 <button
 type="button"
+class="copy-button"
+onclick="copyPaymentNumber()">
+
+📋 نسخ رقم الدفع
+
+</button>
+
+
+<div
+class="copy-message"
+id="copyMessage">
+
+✓ تم نسخ رقم الدفع بنجاح
+
+</div>
+
+
+<button
+type="button"
 class="pay-button"
 onclick="showPaymentMessage()">
 
-ادفع الآن
+💳 ادفع الآن
 
 </button>
 
@@ -1301,19 +1353,11 @@ onclick="showPaymentMessage()">
 
 <button
 type="submit"
-class="submit">
+class="submit-button">
 
 تأكيد طلب حجز الاستشارة
 
 </button>
-
-
-<div class="note">
-
-بعد إرسال الطلب سيتم فتح WhatsApp
-لتأكيد الحجز.
-
-</div>
 
 
 <div
@@ -1339,7 +1383,7 @@ id="result">
 
 <div class="wrap faq">
 
-<div class="head">
+<div class="section-title">
 
 <h2>
 أسئلة شائعة
@@ -1361,7 +1405,6 @@ id="result">
 </details>
 
 
-
 <details>
 
 <summary>
@@ -1373,7 +1416,6 @@ id="result">
 </p>
 
 </details>
-
 
 
 <details>
@@ -1396,8 +1438,8 @@ id="result">
 </summary>
 
 <p>
-يمكنك الدفع من خلال رمز QR الموجود في نموذج الحجز
-أو باستخدام رقم التحويل 4918107287.
+يمكنك استخدام رقم الدفع:
+4918107287
 </p>
 
 </details>
@@ -1415,7 +1457,7 @@ id="result">
 
 <footer>
 
-<div class="wrap foot">
+<div class="wrap footer-content">
 
 <div>
 © 2026 Mohammed Al-Olayan
@@ -1436,8 +1478,8 @@ id="result">
 ========================= -->
 
 <a
-class="wa"
-id="wa"
+class="whatsapp"
+id="whatsappButton"
 target="_blank">
 
 WhatsApp
@@ -1450,16 +1492,16 @@ WhatsApp
 
 
 /* =========================
-   SCROLL
+   SCROLL TO BOOKING
 ========================= */
 
-function go(id){
+function scrollToBooking(){
 
-document
-.getElementById(id)
-.scrollIntoView({
-behavior:'smooth'
-});
+    document
+    .getElementById("booking")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
 
 }
 
@@ -1469,71 +1511,153 @@ behavior:'smooth'
    TIME SLOTS
 ========================= */
 
-const slots=[
+const timeSlots = [
 
-'10:00 صباحًا',
-'12:00 ظهرًا',
-'2:00 مساءً',
-'4:00 مساءً',
-'6:00 مساءً',
-'8:00 مساءً'
+    "10:00 صباحًا",
+    "12:00 ظهرًا",
+    "2:00 مساءً",
+    "4:00 مساءً",
+    "6:00 مساءً",
+    "8:00 مساءً"
 
 ];
 
 
-slots.forEach(function(t){
-
-let b=document.createElement('button');
-
-b.type='button';
-
-b.className='time';
-
-b.textContent=t;
+const timesContainer =
+document.getElementById("times");
 
 
-b.onclick=function(){
+timeSlots.forEach(function(time){
 
-document
-.querySelectorAll('.time')
-.forEach(function(x){
+    const button =
+    document.createElement("button");
 
-x.classList.remove('active');
+    button.type = "button";
 
-});
+    button.className =
+    "time-button";
 
-
-b.classList.add('active');
-
-
-document
-.getElementById('time')
-.value=t;
-
-};
+    button.textContent =
+    time;
 
 
-document
-.getElementById('times')
-.appendChild(b);
+    button.addEventListener(
+        "click",
+        function(){
+
+            document
+            .querySelectorAll(".time-button")
+            .forEach(function(btn){
+
+                btn.classList.remove("active");
+
+            });
+
+
+            button.classList.add("active");
+
+
+            document
+            .getElementById("selectedTime")
+            .value = time;
+
+        }
+    );
+
+
+    timesContainer.appendChild(button);
 
 });
 
 
 
 /* =========================
-   DATE
+   MINIMUM DATE
 ========================= */
 
-let d=document.getElementById('date');
+const dateInput =
+document.getElementById("date");
 
-let now=new Date();
+const today =
+new Date();
 
-d.min=new Date(
-now-now.getTimezoneOffset()*60000
+const localDate =
+new Date(
+    today.getTime()
+    -
+    today.getTimezoneOffset()*60000
 )
 .toISOString()
 .slice(0,10);
+
+dateInput.min =
+localDate;
+
+
+
+/* =========================
+   PAYMENT NUMBER
+========================= */
+
+const PAYMENT_NUMBER =
+"4918107287";
+
+
+
+/* =========================
+   COPY PAYMENT NUMBER
+========================= */
+
+function copyPaymentNumber(){
+
+    navigator.clipboard
+    .writeText(PAYMENT_NUMBER)
+    .then(function(){
+
+        const message =
+        document.getElementById("copyMessage");
+
+        message.style.display =
+        "block";
+
+
+        setTimeout(function(){
+
+            message.style.display =
+            "none";
+
+        },3000);
+
+    })
+    .catch(function(){
+
+        alert(
+            "رقم الدفع: "
+            +
+            PAYMENT_NUMBER
+        );
+
+    });
+
+}
+
+
+
+/* =========================
+   PAYMENT BUTTON
+========================= */
+
+function showPaymentMessage(){
+
+    alert(
+        "رقم الدفع هو:\n\n"
+        +
+        PAYMENT_NUMBER
+        +
+        "\n\nبعد إتمام التحويل، احتفظ بصورة الإيصال ثم أكمل بيانات الحجز."
+    );
+
+}
 
 
 
@@ -1541,26 +1665,16 @@ now-now.getTimezoneOffset()*60000
    WHATSAPP NUMBER
 ========================= */
 
-const WA='9647857275552';
+const WHATSAPP_NUMBER =
+"9647857275552";
 
 
 document
-.getElementById('wa')
-.href='https://wa.me/'+WA;
-
-
-
-/* =========================
-   PAYMENT MESSAGE
-========================= */
-
-function showPaymentMessage(){
-
-alert(
-'رقم التحويل: 4918107287\n\nبعد إتمام التحويل، احتفظ بصورة الإيصال ثم أكمل بيانات الحجز واضغط على "تأكيد طلب حجز الاستشارة".'
-);
-
-}
+.getElementById("whatsappButton")
+.href =
+"https://wa.me/"
++
+WHATSAPP_NUMBER;
 
 
 
@@ -1569,103 +1683,183 @@ alert(
 ========================= */
 
 document
-.getElementById('form')
-.onsubmit=function(e){
+.getElementById("bookingForm")
+.addEventListener(
+    "submit",
+    function(event){
 
-e.preventDefault();
+        event.preventDefault();
 
 
-/* CHECK TIME */
+        const selectedTime =
+        document
+        .getElementById("selectedTime")
+        .value;
 
-if(
-!document
-.getElementById('time')
-.value
-){
 
-alert(
-'يرجى اختيار وقت الاستشارة'
+        if(!selectedTime){
+
+            alert(
+                "يرجى اختيار وقت الاستشارة."
+            );
+
+            return;
+
+        }
+
+
+        const name =
+        document
+        .getElementById("name")
+        .value;
+
+
+        const phone =
+        document
+        .getElementById("phone")
+        .value;
+
+
+        const projectType =
+        document
+        .getElementById("projectType")
+        .value;
+
+
+        const budget =
+        document
+        .getElementById("budget")
+        .value;
+
+
+        const date =
+        document
+        .getElementById("date")
+        .value;
+
+
+        const idea =
+        document
+        .getElementById("idea")
+        .value;
+
+
+
+        const message =
+
+        "طلب حجز استشارة\n\n"
+
+        +
+
+        "الاسم: "
+        +
+        name
+        +
+        "\n"
+
+        +
+
+        "رقم WhatsApp: "
+        +
+        phone
+        +
+        "\n"
+
+        +
+
+        "نوع المشروع: "
+        +
+        projectType
+        +
+        "\n"
+
+        +
+
+        "الميزانية: "
+        +
+        budget
+        +
+        "\n"
+
+        +
+
+        "التاريخ: "
+        +
+        date
+        +
+        "\n"
+
+        +
+
+        "الوقت: "
+        +
+        selectedTime
+        +
+        "\n"
+
+        +
+
+        "فكرة المشروع: "
+        +
+        idea
+        +
+        "\n\n"
+
+        +
+
+        "رقم الدفع: "
+        +
+        PAYMENT_NUMBER
+
+        +
+
+        "\n"
+
+        +
+
+        "قيمة الاستشارة: 50,000 د.ع";
+
+
+
+        const result =
+        document.getElementById("result");
+
+
+        result.style.display =
+        "block";
+
+
+        result.textContent =
+        "تم تجهيز طلب الحجز، سيتم فتح WhatsApp لتأكيد الحجز.";
+
+
+
+        const whatsappURL =
+
+        "https://wa.me/"
+
+        +
+
+        WHATSAPP_NUMBER
+
+        +
+
+        "?text="
+
+        +
+
+        encodeURIComponent(
+            message
+        );
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    }
 );
-
-return;
-
-}
-
-
-/* GET VALUES */
-
-let v=function(id){
-
-return document
-.getElementById(id)
-.value;
-
-};
-
-
-let name=v('name');
-let phone=v('phone');
-let type=v('type');
-let budget=v('budget');
-let date=v('date');
-let time=v('time');
-let idea=v('idea');
-
-
-/* WHATSAPP MESSAGE */
-
-let message=
-
-'طلب حجز استشارة\n\n'+
-
-'الاسم: '+name+'\n'+
-
-'WhatsApp: '+phone+'\n'+
-
-'نوع المشروع: '+type+'\n'+
-
-'الميزانية: '+budget+'\n'+
-
-'التاريخ: '+date+'\n'+
-
-'الوقت: '+time+'\n'+
-
-'الفكرة: '+idea+'\n\n'+
-
-'رقم التحويل: 4918107287\n'+
-
-'رسوم الاستشارة: 50,000 د.ع';
-
-
-
-/* RESULT */
-
-let result=
-document.getElementById('result');
-
-result.style.display='block';
-
-result.textContent=
-'تم تجهيز طلب الحجز. سيتم فتح WhatsApp لتأكيد الحجز.';
-
-
-
-/* OPEN WHATSAPP */
-
-let whatsappURL=
-'https://wa.me/'+
-WA+
-'?text='+
-encodeURIComponent(message);
-
-
-window.open(
-whatsappURL,
-'_blank'
-);
-
-};
-
 
 </script>
 
